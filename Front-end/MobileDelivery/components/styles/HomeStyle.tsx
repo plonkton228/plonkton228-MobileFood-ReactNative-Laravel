@@ -29,13 +29,16 @@ export const HomeStyle = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: "space-between",
-        flexGrow : 0.2
+        flexGrow : 0.9
 
     },
     contentContainer : {
-        flexGrow: 5
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "flex-start",
+        flexGrow: 3
     },
     observeCont: {
-        flexGrow : 0.2
+        flexGrow : 0.6
     }
 })

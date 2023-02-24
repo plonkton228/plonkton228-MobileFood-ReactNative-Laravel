@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\saleController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -36,3 +38,6 @@ Route::group([
 });
 
 Route::get('posts', [PostController::class,'index']);
+Route::get('getPosts', [PostController::class,'getPosts']);
+Route::get('posts/{post}', [PostController::class, 'show']);
+Route::get('sales', [saleController::class,'index']);

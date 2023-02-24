@@ -12,4 +12,21 @@ class PostController extends Controller
          $posts = Post::where('category_id',$request->id)->get();
          return response()->json($posts);
     }
+
+    public function show (Request $request)
+    {
+        $post = Post::where('id', $request->id)->get();
+        return response()->json($post);
+    }
+
+    public function getPosts(Request $request)
+    {
+        $posts = [];
+        foreach ($request->ids as  $id) {
+            
+            array_push($posts, Post::where('id',$id)->get());
+        }
+        
+         return response()->json($posts);
+    }
 }

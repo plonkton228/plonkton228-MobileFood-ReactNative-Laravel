@@ -20,6 +20,7 @@ export const MainPageStyle = StyleSheet.create({
         justifyContent: "space-between",
         flexDirection : "row",
         flexGrow : 0.2,
+        
      },
      footer : {
         display : 'flex',
@@ -30,9 +31,31 @@ export const MainPageStyle = StyleSheet.create({
 
      },
      contentContainer : {
+        display: "flex",
+         
+
+        maxWidth: 400,
+        width: "100%",
         flexGrow : 5,
-        display : 'flex',
-        justifyContent: 'space-around'
+
+        paddingTop: 90,
+       
+
+        textAlign: "center"
+        
+     },
+
+     headerh1 : {
+        alignSelf: "center",
+        marginBottom: 17,
+
+        flexGrow: 0.04,
+
+        
+     },
+
+     PostsContainer : {
+        flexGrow: 2
      }
 })
 
@@ -40,6 +63,8 @@ export const MainPageStyle = StyleSheet.create({
 export const MenuStyle = StyleSheet.create({
     MainContainer :{
       backgroundColor: "#FA4A0C",
+      maxWidth: 500,
+      width: "100%",
       height: "100%",
       display: "flex",
       justifyContent: "space-around",

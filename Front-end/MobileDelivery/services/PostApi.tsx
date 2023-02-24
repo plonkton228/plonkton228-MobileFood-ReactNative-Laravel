@@ -11,6 +11,23 @@ export const postAPI = createApi({
                     id: id
                 }
             })
+        }),
+        fetchPostByIds: build.query({
+            query: (id: number)=> ({
+                url: `/posts/${id}`,
+                params: {
+                    id:id
+                }
+            })
+           
+        }),
+        fetchSalesById: build.query({
+            query: (id: number) => ({
+                url: `/sales`,
+                params : {
+                    id:id
+                }
+            })
         })
     })
 })

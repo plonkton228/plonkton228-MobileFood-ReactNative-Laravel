@@ -13,7 +13,7 @@ const PressComponent : React.FC<PressTemplate> = (props)=> {
         <View style = {stylesL.containerInner}>
         <Pressable onPress={props.PressLog}   style = {({pressed})=> [{backgroundColor: pressed
         ? '#FA4A0C'
-        : 'white', alignSelf :'flex-end'}]}>
+        : 'white'}]}>
          <Text style = {stylesL.textstyle}>Login</Text>
         </Pressable>
         <Pressable onPress={props.PressReg} style = {({pressed})=> [{backgroundColor: pressed

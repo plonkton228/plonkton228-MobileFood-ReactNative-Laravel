@@ -21,7 +21,7 @@ const MainPage : React.FC = ()=> {
     const navigate = useNavigate();
     const dispatch = useTypeDispatch();
     const {user,access_token} = useTypeSelector(state => state.user);
-    const [pageSetting , setPageSetting] = useState<PageSettingsTemplate>({focus: '', page : 'offers', showMenu : true});
+    const [pageSetting , setPageSetting] = useState<PageSettingsTemplate>({focus: '', page : 'home', showMenu : true});
     const scaleValue = useRef(new Animated.Value(1)).current;
     const translateValue = useRef(new Animated.Value(1)).current;
     const  LogOut = ()=> {
@@ -54,7 +54,7 @@ const MainPage : React.FC = ()=> {
                  <HeaderComponent AnimateMenu={AnimateMenu}/>
                {pageSetting.page == 'profile' ? <Profile/> : pageSetting.page == 'orders' ? <Order/> : pageSetting.page == 'home' ? <Offers/> : pageSetting.page == 'privacy' ? <Privacy/> :<Security/> }
                
-                 <FooterComponent/>
+                 <FooterComponent setPageSetting={setPageSetting} pageSetting = {pageSetting}/>
             </Animated.View>
              <MenuContent setPageSetting={setPageSetting} pageSetting ={pageSetting} LogOut = {LogOut}/>
         </View>
