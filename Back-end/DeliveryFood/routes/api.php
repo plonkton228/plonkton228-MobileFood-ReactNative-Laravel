@@ -41,3 +41,5 @@ Route::get('posts', [PostController::class,'index']);
 Route::get('getPosts', [PostController::class,'getPosts']);
 Route::get('posts/{post}', [PostController::class, 'show']);
 Route::get('sales', [saleController::class,'index']);
+// Route::post('sales',[saleController::class,'addSale']);
+Route::post('sales', [saleController::class, 'RootFunc']);

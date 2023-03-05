@@ -40,7 +40,7 @@ import axios from "axios";
     }
 
     const RegIn = (userReg : IReg)=> {
-        dispatch(RegUser(userReg));
+        // dispatch(RegUser(userReg));
         navigate('/');
     }
   

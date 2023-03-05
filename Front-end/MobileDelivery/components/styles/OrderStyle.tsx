@@ -6,21 +6,30 @@ export const OrderStyle = StyleSheet.create({
         marginBottom: 20,
         flexDirection: "row",
         alignItems: "center",
+       
 
         maxWidth: 385,
         width: "100%",
-        
+        maxHeight: 102,
+        height: "100%",
 
         backgroundColor: "#FFFFFF",
-        borderRadius: 10,
+        borderRadius: 30,
+
+        paddingTop: 40,
+        paddingBottom: 20
     },
     ImagePost : {
-       height: 69,
-       maxWidth: 69,
-       width: "100%"
+    //    height: 69,
+    //    width: 69,
+    //    width: "100%",
+    //    height: "100%",
+        
     },
     PostInner  : {
         marginLeft: 5,
+        width: "100%",
+        maxWidth: 215,
     },
     TextPost : {
         fontSize: 17,
@@ -37,6 +46,8 @@ export const OrderStyle = StyleSheet.create({
         color: "#FA4A0C",
 
         lineHeight: 18,
+
+
 
     },
 
@@ -61,6 +72,50 @@ export const OrderStyle = StyleSheet.create({
         color: "#FFFFFF",
         fontWeight: "600",
         textAlign: "center",
+    },
+    
+    counterDiv : {
+        display : "flex",
+        flexDirection: "row",
+        justifyContent: 'center',
+        alignItems: "center",
+
+        maxWidth : 52,
+        maxHeight: 20,
+
+        width: "100%",
+        height: "100%",
+
+        backgroundColor: "#FA4A0C",
+
+        borderRadius: 20,
+        
+        zIndex: 1000,
+        
+    },
+
+    counterInner : {
+        color: 'white',
+        fontWeight: "600",
+        fontSize : 15,
+        lineHeight: 18,
+    },
+
+    counterImg : {
+        maxWidth : 7,
+     
+
+        width: "100%",
+    
+    },
+
+    counterTouch1 : {
+        marginRight: 7,
+    },
+
+    counterTouch2 : {
+        marginLeft: 7,
     }
+
     
 })

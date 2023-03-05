@@ -2,6 +2,10 @@ import { View , TouchableOpacity, Image, Text} from "react-native"
 import { postAPI } from "../../services/PostApi";
 import { useNavigate, useParams } from "react-router-native";
 import { InfoFoodStyle } from "../styles/InfoFoodStyle";import { PageSettingsTemplate } from "../templates/ISettingsPage";
+import { useContext } from "react";
+import { SaleApi } from "../../services/SaleApi";
+import { useTypeSelector } from "../hooks/redux";
+import axios from "axios";
 ;
 
 interface PostTemplate {
@@ -12,16 +16,18 @@ interface PostTemplate {
 const Post : React.FC<PostTemplate> = ({pageSetting, setPageSetting})=> {
     const {id} = useParams();
     const navigate = useNavigate();
-    
+    console.log(id);
     const {data} = postAPI.useFetchPostByIdsQuery(Number(id))
-    
+    const {user} = useTypeSelector(state => state.user)
  
     const Press = ()=> {
         navigate('/');
-        
     }
     const SalePress = ()=> {
-    //    setPageSetting({...pageSetting, focus : 'order', page: 'order' })
+        if(id && user)
+        {
+             axios.post("http://127.0.0.1:8000/api/sales", {user_id: user.id, post_id : id,counter : 1})
+        }
        navigate('/');
     }
     return(<>

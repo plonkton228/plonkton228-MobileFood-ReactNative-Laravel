@@ -21,7 +21,7 @@ const initialState : TemplateState = {
  
     user : obj,
     isLoading: false,
-    isAuth : false,
+    isAuth : true,
     errors : "",
     access_token: "",
 }

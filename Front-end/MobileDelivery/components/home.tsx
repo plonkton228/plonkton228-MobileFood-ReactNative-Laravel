@@ -12,11 +12,9 @@ const Home : React.FC = ()=> {
   const [QueryPost, setQueryPost] = useState<number>(1);
   const {data = [], isLoading} = postAPI.useFetchPostByIdQuery(QueryPost);
   const [inputValue,setInputValue] = useState<string>('');
-  console.log({QueryPost: QueryPost, data : data});
   const searchPost = useMemo( ()=> {
         return data.filter((post : IPost)=> post.title.toLocaleLowerCase().includes(inputValue.toLocaleLowerCase()))
   },[inputValue,data])
-  console.log(searchPost)
     return (<>
      <View style ={MainPageStyle.contentContainer}>
         <HomeContent setInputValue={setInputValue} setQueryPost = {setQueryPost} inputValue = {inputValue}/>
